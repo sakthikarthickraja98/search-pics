@@ -2,6 +2,7 @@ import React,{Component} from "react";
 import Searchbar from "./searchbar";
 import unsplash from '../api/unsplash';
 import Imagelist from './imagelist';
+import "../searchbar.css";
 
 class App extends Component{
   state={images:[]};
@@ -16,7 +17,13 @@ onSearchSubmit = async(term) => {
   render(){
     return (
     <div>
+      <div className="searchbar">
+      <h3>
+      <div className="fixed">
       <Searchbar onSubmit={this.onSearchSubmit}/>
+      </div>
+      </h3>
+      </div>
       <Imagelist Image={this.state.images}/>
     </div>
   );
