@@ -17,14 +17,14 @@ onSearchSubmit = async(term) => {
   render(){
     return (
     <div>
-      <div className="searchbar">
       <h3>
       <div className="fixed">
       <Searchbar onSubmit={this.onSearchSubmit}/>
       </div>
       </h3>
-      </div>
+
       <Imagelist Image={this.state.images}/>
+      
     </div>
   );
   }
