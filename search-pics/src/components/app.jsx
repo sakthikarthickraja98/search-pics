@@ -1,6 +1,7 @@
 import React,{Component} from "react";
 import Searchbar from "./searchbar";
 import unsplash from '../api/unsplash';
+import Imagelist from './imagelist';
 
 class App extends Component{
   state={images:[]};
@@ -16,7 +17,7 @@ onSearchSubmit = async(term) => {
     return (
     <div>
       <Searchbar onSubmit={this.onSearchSubmit}/>
-      Found: {this.state.images.length} images
+      <Imagelist Image={this.state.images}/>
     </div>
   );
   }
