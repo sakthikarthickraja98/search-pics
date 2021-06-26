@@ -17,11 +17,13 @@ onSearchSubmit = async(term) => {
   render(){
     return (
     <div>
+      <div className="sticky">
       <h3>
-      <div className="fixed">
+      <div className="ui segment">
       <Searchbar onSubmit={this.onSearchSubmit}/>
       </div>
       </h3>
+      </div>
 
       <Imagelist Image={this.state.images}/>
       
